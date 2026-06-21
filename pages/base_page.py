@@ -50,3 +50,7 @@ class BasePage:
         self.driver.execute_script("""
             document.querySelectorAll('[class*="Modal_modal_overlay"]').forEach(el => el.remove());
         """)
+
+    @allure.step("Открыть страницу")
+    def open_page(self, url):
+        self.driver.get(url)

@@ -51,7 +51,3 @@ class MainPage(BasePage):
     def go_to_login(self):
         self.click_constructor()
         self.open_page(DT.LOGIN_PAGE_URL)
-
-    @allure.step("Открыть страницу")
-    def open_page(self, url):
-        self.driver.get(url)
